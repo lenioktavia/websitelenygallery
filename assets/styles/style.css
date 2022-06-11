@@ -1,0 +1,372 @@
+* {
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Open Sans', sans-serif;
+   
+}
+.wrapper {
+    width: 1247px;
+
+    position: relative;
+}
+.logo a {
+    font-size: 50px;
+    font-weight: 800;
+    float: left;
+    font-family: courier;
+    color: #d16c19;
+    padding-left: 20px;
+}
+.menu {
+    float: right;
+}
+
+nav {
+    width: 100%;
+    margin: auto;
+    display: flex;
+    line-height: 80px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background: black;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+
+}
+
+nav ul li {
+    float: left;
+
+}
+
+nav ul li a {
+    color: coral;
+    font-weight: bold;
+    text-align: center;
+    padding: 0px 16px 0px 16px;
+    text-decoration: none;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+/* dibawah menu , ini untuk home */
+section {
+    margin: auto;
+    display: flex;
+   
+}
+.kolom {
+    margin-top: 0px;
+    margin-bottom: 50px;
+}
+.kolom .deskripsi {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'comic sans sm';
+    color: #d16c19;
+}
+
+h2 {
+    font-family: 'comic sans sm';
+    font-weight: 800;
+    font-size: 45px;
+    margin-bottom: 20px;
+    color: #d16c19;
+    width: 100%;
+    line-height: 50px;
+}
+a.btn-orange {
+    background: #d16c19;
+    border-radius: 20px;
+    margin-top: 20px;
+    padding: 15px 20px 15px 20px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+}
+a.btn-orange:hover {
+    background: #753422;
+    text-decoration: none;
+}
+p {
+    margin: 10px 40px 10px 40px;
+    padding: 10px 0px 10px 0px ;
+    font-family: 'Open Sans', sans-serif;
+}
+#home {
+    width: 100%;
+    height: 600px;
+}
+
+/*  gallery*/
+.gambar {
+    position: relative;
+  }
+.judul-gambar{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(90,0,10,0.4);
+     
+    /* typographic styles */
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    text-decoration: none;
+     
+    /* position the text centrally*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* menyembunyikan judul */
+    opacity: 0;
+    transition: opacity .5s;
+}
+img {
+    width: 100%;
+    height: auto;
+}
+.lokasi-gambar {
+    line-height: 0; 
+  }
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 1em;
+    margin: 40px;
+  }
+.ukuran-gambar {
+    width: 100%;
+    height: auto;
+}
+.gambar:hover .judul-gambar {
+    opacity: 1;
+    z-index: 1;
+}
+.lokasi-gambar img {
+    filter: blur(0px);
+    transition: filter 0.3s ease-in;
+}
+.gambar:hover .lokasi-gambar img {
+    filter: blur(2px);
+}
+/* for touch screen devices */
+
+@media (hover: none) { 
+    .location-title {
+      opacity: 1;
+    }
+    .location-image img {
+      filter: blur(2px);
+    }
+  }
+
+/* footer */
+  .footer {
+    background-color: black;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 20px;
+  }
+
+  .aside {
+    background-color: #33b5e5;
+    padding: 15px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  }
+
+  /* responsive */
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 64.99999%;
+}
+/*berfungsi untuk mengubah style class responsive pada lebar maksimum 700px*/
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+/*berfungsi untuk mengubah style class responsive pada lebar maksimum 500px*/
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+/*clearfix adalah cara praktis yang digunakan untuk clear element yang sebelumnya mengalami float*/
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* profil card */
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    padding: 0px;
+    margin-top: 5px;
+ }
+ .profile img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+   
+ }
+ .profile header {
+    text-align: center;
+    margin: 40px;
+ }
+
+ /* badan */
+ #content {
+    float: left;
+    width: 75%;
+ }
+ main {
+    padding: 20px;
+    overflow: auto;
+ }
+ aside {
+    float: right;
+    width: 25%;
+    padding-left: 20px;
+ }
+ .center {
+    text-align: center;
+    margin: 40px;
+ }
+
+
+ /* slider */
+ /* Slideshow container */
+.slideshow-container {
+    max-width: 650px;
+    position: relative;
+    margin: auto;
+  }
+  
+  /* Hide the images by default */
+  .mySlides {
+    display: none;
+  }
+  
+  /* Next & previous buttons */
+  .prev, .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+  }
+  
+  /* Position the "next button" to the right */
+  .next {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+  
+  /* Caption text */
+  .text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  /* Number text (1/3 etc) */
+  .numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+  }
+  
+  /* The dots/bullets/indicators */
+  .dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+  
+  .active, .dot:hover {
+    background-color: #717171;
+  }
+  
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+  
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+  
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  #jarak {
+      margin-top: 10%;
+  }
+  h1 {
+    color: #d16c19;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 25px;
+  }
+figcaption {
+    font-family: 'Open Sans', sans-serif;
+    margin: 5px;
+    font-size: 20px;
+    padding-bottom: 5px;
+    color: #d16c19;
+}

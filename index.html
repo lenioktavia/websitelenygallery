@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>LENY GALLERY</title>
+        <link rel="stylesheet" href="assets/styles/style.css">
+        <script src="assets/js/slide.js"></script>
+
+    </head>
+    <body>
+        <header>
+            <nav>
+                <div class="wrapper">
+                    <div class="logo">
+                        <a href="#">LENYGALLERY.</a>
+                    </div>
+                    <div class="menu">
+                        <ul>
+                            <li>
+                                <a href="#home">Home</a>
+                            </li>
+                            <li>
+                                <a href="#about">About</a>
+                            </li>
+                            <li>
+                                <a href="#blog">Blog</a>
+                            </li>
+                            <li>
+                                <a href="#contact">Contact</a>
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+
+            </nav>
+
+        </header>
+        <main>
+            <!-- ini untuk home -->
+            <div id="content" class="card">
+
+                <!-- Slideshow container -->
+                <div class="slideshow-container">
+
+                    <!-- Full-width images with number and caption text -->
+                    <div class="mySlides fade">
+                        <div class="numbertext">1 / 3</div>
+                        <img src="assets/img/monkey.jpg" style="width:100%">
+                        <div class="text">Caption Text</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">2 / 3</div>
+                        <img src="assets/img/img043.jpg" style="width:100%">
+                        <div class="text">Caption Two</div>
+                    </div>
+
+                    <div class="mySlides fade">
+                        <div class="numbertext">3 / 3</div>
+                        <img src="assets/img/img016.jpg" style="width:100%">
+                        <div class="text">Caption Three</div>
+                    </div>
+
+                    <!-- Next and previous buttons -->
+                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+
+                <!-- The dots/circles -->
+                <div style="text-align:center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+
+            <aside>
+                <article class="profile card">
+                    <header>
+                        <h1>Profil</h1>
+                        <p><b>Artist dan web programmer</b></p>
+                        <figure>
+                            <img src="assets/img/lenipost.jpg">
+                            <figcaption><b>Leni Oktavia</b></figcaption>
+                        </figure>
+                    </header>
+                </aside>
+            </main>
+
+            <div class="center">
+                <article id="jarak">
+                    <h1>GALLERY ART</h1>
+                    <p>Seni dengan water color style dan degan pencil warna.
+						 Karya ini di buat secara manual(bukan digital editing). 
+						 Fokus dalam membuat portrait art untuk menghasilkan karya yang maksimal.
+						Saya sangat senang jika kamu suka dengan style artwork ini. </p>
+                </article>
+
+                <div class="grid-container">
+                    <article class="gambar card">
+                        <a class="judul-gambar" href="">Watercolor</a>
+                        <div class="lokasi-gambar ukuran-gambar">
+                            <img src="assets/img/img035-crop.jpg">
+                        </div>
+                    </article>
+                    <article class="gambar card">
+                        <a class="judul-gambar" href="">Pencil Color</a>
+                        <div class="lokasi-gambar ukuran-gambar">
+                            <img src="assets/img/img014.jpg">
+                        </div>
+                    </article>
+                    <article class="gambar card">
+                        <a class="judul-gambar" href="">Watercolor</a>
+                        <div class="lokasi-gambar ukuran-gambar">
+                            <img src="assets/img/img016.jpg">
+                        </div>
+                    </article>
+					<article class="gambar card">
+                        <a class="judul-gambar" href="">Watercolor</a>
+                        <div class="lokasi-gambar ukuran-gambar">
+                            <img src="assets/img/2_001.jpg">
+                        </div>
+                    </article>
+					<article class="gambar card">
+                        <a class="judul-gambar" href="">Watercolor</a>
+                        <div class="lokasi-gambar ukuran-gambar">
+                            <img src="assets/img/img043.jpg">
+                        </div>
+                    </article>
+                </div>
+            </div>
+
+            <footer>
+                <div class="footer">
+                    <p>&#169Leny Gallery-Bandung, 2021</p>
+                </div>
+            </footer>
+            <!-- javascript -->
+            <script>
+                var slideIndex = 1;
+                showSlides(slideIndex);
+
+                function plusSlides(n) {
+                    showSlides(slideIndex += n);
+                }
+
+                function currentSlide(n) {
+                    showSlides(slideIndex = n);
+                }
+
+                function showSlides(n) {
+                    var i;
+                    var slides = document.getElementsByClassName("mySlides");
+                    var dots = document.getElementsByClassName("dot");
+                    if (n > slides.length) {
+                        slideIndex = 1
+                    }
+                    if (n < 1) {
+                        slideIndex = slides.length
+                    }
+                    for (i = 0; i < slides.length; i++) {
+                        slides[i].style.display = "none";
+                    }
+                    for (i = 0; i < dots.length; i++) {
+                        dots[i].className = dots[i]
+                            .className
+                            .replace(" active", "");
+                    }
+                    slides[slideIndex - 1].style.display = "block";
+                    dots[slideIndex - 1].className += " active";
+                }
+            </script>
+
+        </body>
+    </html>
